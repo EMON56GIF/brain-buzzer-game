@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎯 Number Clash | Brain Buzzer</title>
+  <link rel="stylesheet" href="css/number.css" />
+</head>
+<body>
+  <canvas id="cherryCanvas"></canvas>
+
+  <div class="game-container">
+    <h1 class="game-title">⚔️ Number Clash ⚔️</h1>
+    <p id="roundInfo">Click "Start Game" to begin</p>
+
+    <!-- ✅ Start Button Section -->
+    <div class="controls" id="startSection">
+      <button id="startGameBtn" class="btn">Start Game</button>
+    </div>
+
+    <!-- ✅ Game Input Section (hidden until Start) -->
+    <div class="input-section hidden" id="gameSection">
+      <input type="number" id="guessInput" placeholder="Enter your guess" />
+      <button id="guessBtn" class="btn">Guess</button>
+    </div>
+
+    <p id="feedback"></p>
+    <p id="attempts"></p>
+
+    <div class="controls">
+      <button id="nextRoundBtn" class="btn hidden">Next Round</button>
+      <a href="index.html" class="btn back-btn">← Back</a>
+    </div>
+  </div>
+
+  <footer>Made with ❤️ by <strong>Prithviraj Pati</strong></footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/number_game.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@500&display=swap');
+
+/* ========= GENERAL STYLING ========= */
+body {
+  margin: 0;
+  height: 100vh;
+  background: url('../images/BTS-Hero_Blog_1170x500.avif') center/cover no-repeat fixed;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  z-index: 0;
+}
+
+#cherryCanvas {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ========= GAME CONTAINER ========= */
+.game-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  padding: 40px 60px;
+  border-radius: 25px;
+  box-shadow: 0 0 30px rgba(255, 204, 0, 0.4);
+  max-width: 500px;
+  width: 90%;
+}
+
+/* ========= TITLE ========= */
+.game-title {
+  font-family: 'Bangers', cursive;
+  font-size: 60px;
+  color: #ffe600;
+  text-shadow: 0 0 30px #ff9900, 0 0 80px #ff6600;
+  margin-bottom: 10px;
+}
+
+/* ========= INSTRUCTIONS ========= */
+.instructions {
+  font-size: 20px;
+  color: #ffda70;
+  text-shadow: 0 0 10px #ff9900;
+}
+
+/* ========= INPUT & FEEDBACK ========= */
+#guessInput {
+  margin: 20px 0;
+  padding: 15px;
+  width: 80%;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  box-shadow: 0 0 10px #ffcc00 inset;
+}
+
+#feedback, #attempts {
+  font-size: 20px;
+  color: #ffcc33;
+  margin-top: 10px;
+  text-shadow: 0 0 10px #ffaa00;
+}
+
+/* ========= BUTTONS ========= */
+.btn {
+  background: linear-gradient(180deg, #fff200, #ff9900);
+  border: none;
+  border-radius: 20px;
+  padding: 15px 40px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #000;
+  font-family: 'Bangers', cursive;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 8px #b36b00, 0 0 25px #ff9900;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  transform: translateY(-6px) scale(1.05);
+  background: linear-gradient(180deg, #ffe600, #ff9900);
+  box-shadow: 0 12px #b36b00, 0 0 35px #ffcc00;
+}
+
+.btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 4px #663300;
+}
+
+/* ========= HIDDEN STATE ========= */
+.hidden {
+  display: none;
+}
+
+/* ========= BACK BUTTON ========= */
+.back-btn {
+  display: inline-block;
+  margin-top: 25px;
+  color: #ffe600;
+  font-size: 22px;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 0 0 20px #ff9900, 0 0 40px #ff6600;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.back-btn:hover {
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* ========= FOOTER ========= */
+footer {
+  position: absolute;
+  bottom: 20px;
+  font-size: 18px;
+  color: #ffe600;
+  text-shadow: 0 0 15px #ff9900, 0 0 40px #ff6600;
+  z-index: 2;
+}
+
+/* ========= RESPONSIVE ========= */
+@media (max-width: 768px) {
+  .game-title {
+    font-size: 42px;
+  }
+  .instructions {
+    font-size: 18px;
+  }
+  .btn {
+    font-size: 22px;
+    padding: 14px 35px;
+  }
+  #guessInput {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-title {
+    font-size: 34px;
+  }
+  .game-container {
+    padding: 30px 25px;
+  }
+  footer {
+    font-size: 14px;
+  }
+}
+#startSection {
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}

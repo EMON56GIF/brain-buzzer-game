@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🧩 Puzzle Quest | Brain Buzzer</title>
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/number.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/victory.css" />
+</head>
+
+<body>
+  <!-- 🌸 Cherry Blossom Canvas -->
+  <canvas id="cherryCanvas"></canvas>
+
+  <!-- 🎆 Fireworks Canvas -->
+  <canvas id="fireworks"></canvas>
+
+  <!-- 💡 Hint Bulb (Top Right Corner) -->
+  <button id="hintBtn" class="hint-icon" title="Get Hint">
+    💡
+  </button>
+
+  <!-- 🧩 Puzzle Game Container -->
+  <div class="game-container">
+    <h1 class="game-title">🧩 Puzzle Quest 🧩</h1>
+    <p id="round" class="round-info">Round 1</p>
+
+    <div class="puzzle-box">
+      <p id="question" class="question-text">Loading puzzle...</p>
+    </div>
+
+    <!-- ✅ Answer Input -->
+    <div class="input-section">
+      <input type="text" id="answerInput" placeholder="Enter your answer..." />
+      <button id="submitBtn" class="btn">Submit</button>
+    </div>
+
+    <!-- 📣 Feedback -->
+    <p id="feedback" class="feedback"></p>
+
+    <div class="controls">
+      <a href="index.html" class="btn back-btn">← Back</a>
+    </div>
+  </div>
+
+  <!-- 🎉 Victory / Wrong Overlay -->
+  <div id="victory" class="overlay hidden">
+    <div class="overlay-content">
+      <h1 id="victoryText" class="overlay-title">🎉 CORRECT ANSWER!!!</h1>
+      <div class="overlay-buttons">
+        <button id="nextBtn" class="btn">Next</button>
+        <button id="backBtn" class="btn back-btn">Back</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS Files -->
+  <script src="js/main.js"></script>
+  <script src="js/puzzle_game.js"></script>
+</body>
+</html>
